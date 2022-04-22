@@ -237,7 +237,16 @@ namespace GraMemory
         private void username_Click(object sender, EventArgs e)
         {
             if(!preTimer.Visible)
-                EndGame();
+            {
+                if(timer.Visible)
+                {
+                    EndGame();
+                }
+                else
+                {
+                    openChildForm(new UserForm());
+                }
+            }
         }
 
         private void showRankBtn_Click(object sender, EventArgs e)
